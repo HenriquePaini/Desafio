@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - C:/Users/Usuario/docker/container:/var/www/html
+    networks:
+      - default
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 356241
+      MYSQL_DATABASE: "0temp"
+    ports:
+      - "3306:3306"
+    volumes:
+      - C:/Users/Usuario/MariaDBShared/HeidiSQL:/var/lib/mysql
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
