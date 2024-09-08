@@ -159,18 +159,16 @@ function ret_dados_agend($connTemp){
     $insert_2 = $connTemp->prepare($sql_2);
     $insert_3 = $connTemp->prepare($sql_3);
 
-
-
     if (!$insert_1) {
-        die("Erro ao preparar a consulta de convenios: " . $connTemp->error);
+        die("Erro ao preparar a consulta de procedimentos: " . $connTemp->error);
     }
 
     if (!$insert_2) {
-        die("Erro ao preparar a consulta de pacientes: " . $connTemp->error);
+        die("Erro ao preparar a consulta de profissionais: " . $connTemp->error);
     }
 
     if (!$insert_3) {
-        die("Erro ao preparar a consulta de pacientes: " . $connTemp->error);
+        die("Erro ao preparar a consulta de agendamentos: " . $connTemp->error);
     }
 
     foreach ($vetor as $linha) {
