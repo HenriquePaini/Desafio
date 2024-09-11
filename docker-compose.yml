@@ -1,26 +1,37 @@
-version: '3.8'
-
 services:
   php:
     build: .
     ports:
       - "8000:80"
     volumes:
-      - C:/Users/Usuario/docker/container:/var/www/html
+      - C:/Users/Usuario/docker/container:/var/www
     networks:
       - default
     depends_on:
-      - db
+      - db_temp
+      - db_medical
 
-  db:
+  db_temp:
     image: mariadb:latest
     environment:
       MYSQL_ROOT_PASSWORD: 356241
       MYSQL_DATABASE: "0temp"
     ports:
-      - "3306:3306"
+      - "3306:3306" # Para conectar ao banco temporário
     volumes:
       - C:/Users/Usuario/MariaDBShared/HeidiSQL:/var/lib/mysql
+    networks:
+      - default
+
+  db_medical:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 356241
+      MYSQL_DATABASE: "MedicalChallenge"
+    ports:
+      - "3307:3306" # Para conectar ao banco fictício
+    volumes:
+      - C:/Users/Usuario/MariaDBShared/MedicalChallenge:/var/lib/mysql
     networks:
       - default
 
