@@ -200,10 +200,9 @@ SELECT *
      , profissionais  pfs
  WHERE age.id_paciente     = pac.id
    AND age.id_convenio     = con.id
-	AND age.id_procedimento = pds.id
-	AND age.id_profissional = pfs.id;
-	
-	convenios
+   AND age.id_procedimento = pds.id
+   AND age.id_profissional = pfs.id;
+
     
 
 
