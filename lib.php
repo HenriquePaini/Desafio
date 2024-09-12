@@ -104,8 +104,8 @@
                 'isssssi',
                 $linha['cod_paciente'],
                 $linha['nome_paciente'],
-                $sexo,  // valor ajustado
-                $nascimento_formatado,  // formato yyyy-mm-dd
+                $sexo,  
+                $nascimento_formatado,  
                 $linha['cpf_paciente'],
                 $linha['rg_paciente'],
                 $linha['id_conv']
