@@ -11,7 +11,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Schema MedicalChallenge
 -- -----------------------------------------------------
 -- docker-compose exec php php /var/www/index.php
--- docker-compose exec db mariadb -uroot -p3convenios56241
 -- -----------------------------------------------------
 -- Schema MedicalChallenge
 -- -----------------------------------------------------
